@@ -1,0 +1,28 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from "./Header.module.css"
+
+function Header() {
+  return (
+      <header className={styles.header}>
+          <div>
+              <Link to="/">
+                  <img src='divar.svg' className={styles.logo}/>
+              </Link>
+              <img src='location.svg'/>
+              <span>تهران</span>
+          </div>
+          <div>
+              <Link to='auth'>
+                  <span>
+                      <img src='profile.svg' />
+                      <p>دیوار من</p>
+                  </span>
+              </Link>
+              <Link to='/dashboard' className={styles.button}>ثبت آگهی</Link>
+          </div>
+    </header>
+  )
+}
+
+export default Header
